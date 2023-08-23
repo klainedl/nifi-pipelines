@@ -6,5 +6,8 @@ flows:
     comments: enable git repository, author: anonymous, created: 1692793352224, flowName: CSV
       Data Pipeline, flowDesc: 'Read from csv, filter and save data as json to text
       file or database'}
+  db552e32-7d61-4212-af79-badb6dcf4618: {ver: 1, file: Postgresql_Elasticsearch_Data_Pipeline.snapshot,
+    comments: '', author: anonymous, created: 1692794986775, flowName: Postgresql
+      Elasticsearch Data Pipeline, flowDesc: Query Postgresql data and index to elasticsearch}
 layoutVer: 1
 bucketId: 706c970e-adfc-4bbb-ab6c-d76610220993
