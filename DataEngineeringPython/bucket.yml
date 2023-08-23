@@ -1,4 +1,8 @@
 flows:
+  6fc1e7b2-7300-4b28-b962-ef3ff8bb63cb: {ver: 1, file: Great_Expectations_Validation_Pipeline.snapshot,
+    comments: '', author: anonymous, created: 1692795133803, flowName: Great Expectations
+      Validation Pipeline, flowDesc: 'Use python script to generate csv and validate
+      data using great expectations, then save valid and invalid data as text file'}
   a85456d1-5b8c-40c9-b1db-07dbb1467c0d: {ver: 1, file: JSON_Data_Pipeline.snapshot,
     comments: '', author: anonymous, created: 1692794883943, flowName: JSON Data Pipeline,
     flowDesc: 'Read from csv, filter and save json data to text file and database'}
