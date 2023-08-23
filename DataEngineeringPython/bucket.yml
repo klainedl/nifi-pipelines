@@ -1,4 +1,7 @@
 flows:
+  a85456d1-5b8c-40c9-b1db-07dbb1467c0d: {ver: 1, file: JSON_Data_Pipeline.snapshot,
+    comments: '', author: anonymous, created: 1692794883943, flowName: JSON Data Pipeline,
+    flowDesc: 'Read from csv, filter and save json data to text file and database'}
   1fa13543-8a3e-4be0-922c-ed747a5b8218: {ver: 5, file: CSV_Data_Pipeline.snapshot,
     comments: enable git repository, author: anonymous, created: 1692793352224, flowName: CSV
       Data Pipeline, flowDesc: 'Read from csv, filter and save data as json to text
