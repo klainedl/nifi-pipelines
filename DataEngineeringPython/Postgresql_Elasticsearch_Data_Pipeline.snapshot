@@ -99,7 +99,7 @@
           "properties" : {
             "el-cs-suppress-nulls" : "always-suppress",
             "el-cs-strict-deprecation" : "false",
-            "el-cs-http-hosts" : "http://localhost:9200",
+            "el-cs-http-hosts" : "${elasticsearch_url}",
             "el-cs-charset" : "UTF-8",
             "el-cs-send-meta-header" : "true",
             "el-cs-enable-compression" : "false",
@@ -905,7 +905,7 @@
             "put-es-record-not_found-is-error" : "true",
             "put-es-record-retain-at-timestamp-field" : "false",
             "put-es-output-error-responses" : "false",
-            "el-rest-fetch-index" : "frompostgresql_nifi",
+            "el-rest-fetch-index" : "${index}",
             "put-es-record-retain-id-field" : "false",
             "el-rest-client-service" : "d79f995f-8f77-3588-a6af-9d3c32e9a5f0",
             "put-es-record-log-error-responses" : "false",
@@ -1068,7 +1068,10 @@
           "yieldDuration" : "1 sec"
         } ],
         "remoteProcessGroups" : [ ],
-        "variables" : { }
+        "variables" : {
+          "elasticsearch_url" : "http://localhost:9200",
+          "index" : "nifivariable"
+        }
       },
       "flowEncodingVersion" : "1.0",
       "parameterContexts" : { },
