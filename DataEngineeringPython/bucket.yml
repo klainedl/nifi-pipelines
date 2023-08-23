@@ -1,0 +1,7 @@
+flows:
+  1fa13543-8a3e-4be0-922c-ed747a5b8218: {ver: 5, file: CSV_Data_Pipeline.snapshot,
+    comments: enable git repository, author: anonymous, created: 1692793352224, flowName: CSV
+      Data Pipeline, flowDesc: 'Read from csv, filter and save data as json to text
+      file or database'}
+layoutVer: 1
+bucketId: 706c970e-adfc-4bbb-ab6c-d76610220993
