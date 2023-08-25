@@ -88,8 +88,8 @@
           },
           "flowFileExpiration" : "0 sec",
           "groupIdentifier" : "6e968fbd-6bd1-3bfe-a36e-6363c62bd4a1",
-          "identifier" : "98abf0de-6790-387c-a2eb-10173c08f51c",
-          "instanceIdentifier" : "2bfb83d9-018a-1000-f9a5-da38cfe1515f",
+          "identifier" : "07c463ad-f90c-3f69-83a3-126cfb38793c",
+          "instanceIdentifier" : "2c332001-018a-1000-c3b1-134f53af0d8c",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
           "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -100,8 +100,8 @@
           "source" : {
             "comments" : "",
             "groupId" : "6e968fbd-6bd1-3bfe-a36e-6363c62bd4a1",
-            "id" : "f77d0211-fdf3-3c18-a3e5-7c4c5c0a98c4",
-            "instanceIdentifier" : "2bf7b42b-018a-1000-ae96-98189e4c29ef",
+            "id" : "190c1475-24da-3b7c-867f-ecfcaa748641",
+            "instanceIdentifier" : "2c329339-018a-1000-2157-725d6406d1f3",
             "name" : "GetFile",
             "type" : "PROCESSOR"
           },
@@ -153,8 +153,8 @@
           "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "ALL",
           "groupIdentifier" : "6e968fbd-6bd1-3bfe-a36e-6363c62bd4a1",
-          "identifier" : "f77d0211-fdf3-3c18-a3e5-7c4c5c0a98c4",
-          "instanceIdentifier" : "2bf7b42b-018a-1000-ae96-98189e4c29ef",
+          "identifier" : "190c1475-24da-3b7c-867f-ecfcaa748641",
+          "instanceIdentifier" : "2c329339-018a-1000-2157-725d6406d1f3",
           "maxBackoffPeriod" : "10 mins",
           "name" : "GetFile",
           "penaltyDuration" : "30 sec",
@@ -170,8 +170,8 @@
             "Batch Size" : "10",
             "Minimum File Size" : "0 B",
             "Ignore Hidden Files" : "true",
-            "Recurse Subdirectories" : "false",
-            "File Filter" : "-^.*\\.([jJ][sS][oO][nN]??)$"
+            "Recurse Subdirectories" : "true",
+            "File Filter" : "[^\\.].*"
           },
           "propertyDescriptors" : {
             "Keep Source File" : {
