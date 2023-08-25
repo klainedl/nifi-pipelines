@@ -1,0 +1,6 @@
+flows:
+  3bd21cc2-19f2-4b00-afb4-a556e7f4cf53: {ver: 1, file: ReadDataLake.snapshot, comments: '',
+    author: anonymous, created: 1692957449680, flowName: ReadDataLake, flowDesc: 'Read
+      json files, evaluate json to attributes, update counter'}
+layoutVer: 1
+bucketId: dc2e8b09-5b36-4327-ac55-2c846835097b
