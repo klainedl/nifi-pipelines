@@ -9,9 +9,6 @@ flows:
   5bbff76c-52e6-461e-81d9-a6a8a5e41179: {ver: 1, file: SCF_Data_Pipeline.snapshot,
     comments: '', author: anonymous, created: 1692798055024, flowName: SCF Data Pipeline,
     flowDesc: ''}
-  46beae96-9618-44f8-919b-9c5496e5f7db: {ver: 1, file: ReadDataLake.snapshot, comments: '',
-    author: anonymous, created: 1692957285195, flowName: ReadDataLake, flowDesc: 'Read
-      json files, evaluate json to attributes, update counter'}
   1fa13543-8a3e-4be0-922c-ed747a5b8218: {ver: 5, file: CSV_Data_Pipeline.snapshot,
     comments: enable git repository, author: anonymous, created: 1692793352224, flowName: CSV
       Data Pipeline, flowDesc: 'Read from csv, filter and save data as json to text
