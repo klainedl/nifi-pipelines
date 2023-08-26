@@ -2,6 +2,9 @@ flows:
   669cf60b-4b8c-41c5-81a2-1571ad0f7525: {ver: 1, file: ScanDataLake.snapshot, comments: '',
     author: anonymous, created: 1693045354473, flowName: ScanDataLake, flowDesc: 'Scan
       json content, evaluate and send to slack'}
+  5481a897-0a66-401a-b7fa-cb8e56ff6b60: {ver: 1, file: InsertStaging.snapshot, comments: '',
+    author: anonymous, created: 1693045438397, flowName: InsertStaging, flowDesc: Insert
+      data to postgres database and update counter}
   9e96f175-8fd3-40c7-a968-d242a992c5a2: {ver: 1, file: ReadDataLake.snapshot, comments: '',
     author: anonymous, created: 1693045332632, flowName: ReadDataLake, flowDesc: 'Read
       json files, evaluate and update counter'}
