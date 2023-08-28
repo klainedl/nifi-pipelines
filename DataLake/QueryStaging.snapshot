@@ -162,11 +162,11 @@
           "name" : "JsonRecordSetWriter",
           "properties" : {
             "compression-level" : "1",
-            "Pretty Print JSON" : "true",
+            "Pretty Print JSON" : "false",
             "compression-format" : "none",
             "Schema Write Strategy" : "no-schema",
             "suppress-nulls" : "never-suppress",
-            "output-grouping" : "output-array",
+            "output-grouping" : "output-oneline",
             "schema-name" : "${schema.name}",
             "schema-access-strategy" : "inherit-record-schema",
             "schema-protocol-version" : "1",
