@@ -306,7 +306,7 @@
             "dbcp-min-evictable-idle-time" : "30 mins",
             "Max Total Connections" : "8",
             "dbcp-max-conn-lifetime" : "-1",
-            "Database Connection URL" : "jdbc:postgresql://localhost/dataengineering",
+            "Database Connection URL" : "jdbc:postgresql://localhost/test",
             "dbcp-time-between-eviction-runs" : "-1",
             "Database User" : "postgresql",
             "dbcp-soft-min-evictable-idle-time" : "-1",
@@ -410,7 +410,7 @@
               "name" : "database-driver-locations",
               "resourceDefinition" : {
                 "cardinality" : "MULTIPLE",
-                "resourceTypes" : [ "URL", "FILE", "DIRECTORY" ]
+                "resourceTypes" : [ "DIRECTORY", "URL", "FILE" ]
               },
               "sensitive" : false
             },

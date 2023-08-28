@@ -1,10 +1,10 @@
 flows:
-  e5f03dd4-7158-44f9-ae65-e62c24f27669: {ver: 1, file: QueryStaging.snapshot, comments: '',
-    author: anonymous, created: 1693045473837, flowName: QueryStaging, flowDesc: 'Read
-      from postgres database, evaluate and route on attrbute'}
   669cf60b-4b8c-41c5-81a2-1571ad0f7525: {ver: 1, file: ScanDataLake.snapshot, comments: '',
     author: anonymous, created: 1693045354473, flowName: ScanDataLake, flowDesc: 'Scan
       json content, evaluate and send to slack'}
+  e5f03dd4-7158-44f9-ae65-e62c24f27669: {ver: 2, file: QueryStaging.snapshot, comments: update
+      db connection, author: anonymous, created: 1693208541501, flowName: QueryStaging,
+    flowDesc: 'Read from postgres database, evaluate and route on attrbute'}
   5481a897-0a66-401a-b7fa-cb8e56ff6b60: {ver: 1, file: InsertStaging.snapshot, comments: '',
     author: anonymous, created: 1693045438397, flowName: InsertStaging, flowDesc: Insert
       data to postgres database and update counter}
