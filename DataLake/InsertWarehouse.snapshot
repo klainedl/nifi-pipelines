@@ -865,6 +865,7 @@
           "properties" : {
             "zip" : "$.zip",
             "Destination" : "flowfile-attribute",
+            "filename" : "$.name",
             "city" : "$.city",
             "street" : "$.street",
             "Return Type" : "auto-detect",
@@ -886,6 +887,12 @@
               "displayName" : "Destination",
               "identifiesControllerService" : false,
               "name" : "Destination",
+              "sensitive" : false
+            },
+            "filename" : {
+              "displayName" : "filename",
+              "identifiesControllerService" : false,
+              "name" : "filename",
               "sensitive" : false
             },
             "city" : {

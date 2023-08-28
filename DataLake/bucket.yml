@@ -12,9 +12,10 @@ flows:
   9e96f175-8fd3-40c7-a968-d242a992c5a2: {ver: 2, file: ReadDataLake.snapshot, comments: update
       batch size to 100, author: anonymous, created: 1693209988167, flowName: ReadDataLake,
     flowDesc: 'Read json files, evaluate and update counter'}
-  e630e692-ccaf-45a0-92c3-ec0fcd9cd5c8: {ver: 1, file: InsertWarehouse.snapshot, comments: '',
-    author: anonymous, created: 1693211742322, flowName: InsertWarehouse, flowDesc: 'query
-      staging data, split and evaluate, insert to warehouse table and update counter'}
+  e630e692-ccaf-45a0-92c3-ec0fcd9cd5c8: {ver: 2, file: InsertWarehouse.snapshot, comments: fix
+      filename to match name value, author: anonymous, created: 1693217686219, flowName: InsertWarehouse,
+    flowDesc: 'query staging data, split and evaluate, insert to warehouse table and
+      update counter'}
   4f24d99a-9a05-4ccd-8add-b8cd72f8f15a: {ver: 2, file: ValidateStaging.snapshot, comments: fix
       validation script, author: anonymous, created: 1693217662357, flowName: ValidateStaging,
     flowDesc: 'run great expectation validation, evaluate and route on attribute'}
