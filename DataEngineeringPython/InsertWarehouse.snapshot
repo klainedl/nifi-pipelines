@@ -115,6 +115,39 @@
           "destination" : {
             "comments" : "",
             "groupId" : "52046380-51de-3706-9cbb-6c4820ebdabb",
+            "id" : "0ecb4332-8995-3321-aa73-4c91bbb25e9d",
+            "instanceIdentifier" : "018a100f-0ef0-1bfa-c798-97a03d38b0f9",
+            "name" : "UpdateCounter",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "52046380-51de-3706-9cbb-6c4820ebdabb",
+          "identifier" : "0dd4746b-ac6f-3e8d-9d8b-f7c1c40da1c7",
+          "instanceIdentifier" : "018a1010-0ef0-1bfa-b75b-23497fb2678e",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "52046380-51de-3706-9cbb-6c4820ebdabb",
+            "id" : "f31e361e-dccb-322c-aae7-f9c7b03c1705",
+            "instanceIdentifier" : "3b12ad92-018a-1000-1b1a-275493d6880e",
+            "name" : "PutSQL",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "52046380-51de-3706-9cbb-6c4820ebdabb",
             "id" : "1d45f7db-32e7-3d9e-87e1-42d8903576ee",
             "instanceIdentifier" : "018a1000-0ef0-1bfa-6cbd-487e6aedbe4d",
             "name" : "EvaluateJsonPath",
@@ -465,7 +498,7 @@
         },
         "processGroups" : [ ],
         "processors" : [ {
-          "autoTerminatedRelationships" : [ "success", "failure", "retry" ],
+          "autoTerminatedRelationships" : [ "failure", "retry" ],
           "backoffMechanism" : "PENALIZE_FLOWFILE",
           "bulletinLevel" : "WARN",
           "bundle" : {
@@ -489,7 +522,7 @@
           },
           "properties" : {
             "Support Fragmented Transactions" : "true",
-            "putsql-sql-statement" : "INSERT INTO ${warehouse} VALUES ('${userid}',\n'${name}',${age},'${street}','${city}','${state}','${zip}');",
+            "putsql-sql-statement" : "INSERT INTO ${warehouse} \nVALUES ('${userid}', '${name}', '${age}', '${street}', '${city}', '${state}', '${zip}')\nON CONFLICT (userid) \nDO NOTHING;",
             "Batch Size" : "100",
             "Obtain Generated Keys" : "false",
             "JDBC Connection Pool" : "0ea6fe44-4681-3e49-b882-f06a0bfb2fa2",
@@ -623,6 +656,56 @@
           "schedulingStrategy" : "TIMER_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.standard.SplitText",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ "success" ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.23.2"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "52046380-51de-3706-9cbb-6c4820ebdabb",
+          "identifier" : "0ecb4332-8995-3321-aa73-4c91bbb25e9d",
+          "instanceIdentifier" : "018a100f-0ef0-1bfa-c798-97a03d38b0f9",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "UpdateCounter",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 504.0,
+            "y" : 872.0
+          },
+          "properties" : {
+            "counter-name" : "insertedwarehouse",
+            "delta" : "1"
+          },
+          "propertyDescriptors" : {
+            "counter-name" : {
+              "displayName" : "Counter Name",
+              "identifiesControllerService" : false,
+              "name" : "counter-name",
+              "sensitive" : false
+            },
+            "delta" : {
+              "displayName" : "Delta",
+              "identifiesControllerService" : false,
+              "name" : "delta",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.UpdateCounter",
           "yieldDuration" : "1 sec"
         }, {
           "autoTerminatedRelationships" : [ "failure" ],
