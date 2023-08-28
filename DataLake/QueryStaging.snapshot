@@ -308,7 +308,7 @@
             "dbcp-max-conn-lifetime" : "-1",
             "Database Connection URL" : "jdbc:postgresql://localhost/test",
             "dbcp-time-between-eviction-runs" : "-1",
-            "Database User" : "postgresql",
+            "Database User" : "postgres",
             "dbcp-soft-min-evictable-idle-time" : "-1",
             "database-driver-locations" : "/home/klaine/nifi-1.23.2/drivers",
             "dbcp-max-idle-conns" : "8"
