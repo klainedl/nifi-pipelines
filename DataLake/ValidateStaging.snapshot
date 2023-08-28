@@ -282,9 +282,11 @@
           "properties" : {
             "argumentsStrategy" : "Command Arguments Property",
             "Max Attribute Length" : "256",
-            "Command Path" : "/home/klaine/dataengineeringwithpython/staging/staging_gx.py",
+            "Working Directory" : "/home/klaine/dataengineeringwithpython/staging",
+            "Command Path" : "python3",
             "Argument Delimiter" : ";",
-            "Ignore STDIN" : "false"
+            "Ignore STDIN" : "false",
+            "Command Arguments" : "staging_validation_script.py"
           },
           "propertyDescriptors" : {
             "argumentsStrategy" : {

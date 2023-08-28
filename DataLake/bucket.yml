@@ -15,8 +15,8 @@ flows:
   e630e692-ccaf-45a0-92c3-ec0fcd9cd5c8: {ver: 1, file: InsertWarehouse.snapshot, comments: '',
     author: anonymous, created: 1693211742322, flowName: InsertWarehouse, flowDesc: 'query
       staging data, split and evaluate, insert to warehouse table and update counter'}
-  4f24d99a-9a05-4ccd-8add-b8cd72f8f15a: {ver: 1, file: ValidateStaging.snapshot, comments: '',
-    author: anonymous, created: 1693211703603, flowName: ValidateStaging, flowDesc: 'run
-      great expectation validation, evaluate and route on attribute'}
+  4f24d99a-9a05-4ccd-8add-b8cd72f8f15a: {ver: 2, file: ValidateStaging.snapshot, comments: fix
+      validation script, author: anonymous, created: 1693217662357, flowName: ValidateStaging,
+    flowDesc: 'run great expectation validation, evaluate and route on attribute'}
 layoutVer: 1
 bucketId: dc2e8b09-5b36-4327-ac55-2c846835097b
