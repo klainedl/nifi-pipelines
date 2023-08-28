@@ -12,6 +12,9 @@ flows:
   60c14609-4a69-4ae2-ae69-e7a72d171365: {ver: 2, file: ValidateStaging.snapshot, comments: fix
       relationship, author: anonymous, created: 1693208165574, flowName: ValidateStaging,
     flowDesc: 'Run great expectation validation, evaluate result and route on attribute'}
+  92ed5509-45f1-4c3c-bce6-4f93a5d9532d: {ver: 1, file: InsertWarehouse.snapshot, comments: '',
+    author: anonymous, created: 1693209168435, flowName: InsertWarehouse, flowDesc: 'query
+      staging data, evaluate and split, insert data to warehouse table'}
   1fa13543-8a3e-4be0-922c-ed747a5b8218: {ver: 5, file: CSV_Data_Pipeline.snapshot,
     comments: enable git repository, author: anonymous, created: 1692793352224, flowName: CSV
       Data Pipeline, flowDesc: 'Read from csv, filter and save data as json to text
