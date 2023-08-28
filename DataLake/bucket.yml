@@ -5,8 +5,8 @@ flows:
   e5f03dd4-7158-44f9-ae65-e62c24f27669: {ver: 2, file: QueryStaging.snapshot, comments: update
       db connection, author: anonymous, created: 1693208541501, flowName: QueryStaging,
     flowDesc: 'Read from postgres database, evaluate and route on attrbute'}
-  5481a897-0a66-401a-b7fa-cb8e56ff6b60: {ver: 2, file: InsertStaging.snapshot, comments: update
-      db connection, author: anonymous, created: 1693208550764, flowName: InsertStaging,
+  5481a897-0a66-401a-b7fa-cb8e56ff6b60: {ver: 3, file: InsertStaging.snapshot, comments: update
+      db batch size, author: anonymous, created: 1693209136541, flowName: InsertStaging,
     flowDesc: Insert data to postgres database and update counter}
   9e96f175-8fd3-40c7-a968-d242a992c5a2: {ver: 1, file: ReadDataLake.snapshot, comments: '',
     author: anonymous, created: 1693045332632, flowName: ReadDataLake, flowDesc: 'Read

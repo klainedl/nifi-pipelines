@@ -379,7 +379,7 @@
           "properties" : {
             "Support Fragmented Transactions" : "true",
             "putsql-sql-statement" : "INSERT INTO ${table} VALUES ('${userid}', '${name}', '${age}', '${street}', '${city}', '${state}', '${zip}');",
-            "Batch Size" : "10",
+            "Batch Size" : "100",
             "Obtain Generated Keys" : "false",
             "JDBC Connection Pool" : "1f02a1e8-175b-3753-82dc-5553caf60cfd",
             "database-session-autocommit" : "false",
