@@ -1,16 +1,16 @@
 flows:
-  669cf60b-4b8c-41c5-81a2-1571ad0f7525: {ver: 2, file: ScanDataLake.snapshot, comments: '',
-    author: anonymous, created: 1693210063743, flowName: ScanDataLake, flowDesc: 'Scan
-      json content, evaluate and send to slack'}
   e5f03dd4-7158-44f9-ae65-e62c24f27669: {ver: 4, file: QueryStaging.snapshot, comments: update
       json writer to output one line per object, author: anonymous, created: 1693211866806,
     flowName: QueryStaging, flowDesc: 'Read from postgres database, evaluate and route
       on attrbute'}
+  669cf60b-4b8c-41c5-81a2-1571ad0f7525: {ver: 2, file: ScanDataLake.snapshot, comments: '',
+    author: anonymous, created: 1693210063743, flowName: ScanDataLake, flowDesc: 'Scan
+      json content, evaluate and send to slack'}
   5481a897-0a66-401a-b7fa-cb8e56ff6b60: {ver: 4, file: InsertStaging.snapshot, comments: 'use
       insert on conflict ', author: anonymous, created: 1693210033987, flowName: InsertStaging,
     flowDesc: Insert data to postgres database and update counter}
-  9e96f175-8fd3-40c7-a968-d242a992c5a2: {ver: 2, file: ReadDataLake.snapshot, comments: update
-      batch size to 100, author: anonymous, created: 1693209988167, flowName: ReadDataLake,
+  9e96f175-8fd3-40c7-a968-d242a992c5a2: {ver: 3, file: ReadDataLake.snapshot, comments: update
+      BatchSize to 1000, author: anonymous, created: 1693487490878, flowName: ReadDataLake,
     flowDesc: 'Read json files, evaluate and update counter'}
   e630e692-ccaf-45a0-92c3-ec0fcd9cd5c8: {ver: 2, file: InsertWarehouse.snapshot, comments: fix
       filename to match name value, author: anonymous, created: 1693217686219, flowName: InsertWarehouse,
