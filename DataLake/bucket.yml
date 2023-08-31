@@ -9,6 +9,9 @@ flows:
   53419c94-c5de-4856-ab19-7fad723c7fbb: {ver: 1, file: KafkaProducer.snapshot, comments: '',
     author: anonymous, created: 1693491475560, flowName: KafkaProducer, flowDesc: Implement
       kafka producer with control rate}
+  b8685f2a-1f69-4983-baed-15e915f4c737: {ver: 1, file: KafkaConsumer.snapshot, comments: '',
+    author: anonymous, created: 1693491618209, flowName: KafkaConsumer, flowDesc: Implement
+      kafka consumer in consumer groups with control rate}
   5481a897-0a66-401a-b7fa-cb8e56ff6b60: {ver: 4, file: InsertStaging.snapshot, comments: 'use
       insert on conflict ', author: anonymous, created: 1693210033987, flowName: InsertStaging,
     flowDesc: Insert data to postgres database and update counter}
