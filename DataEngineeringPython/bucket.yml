@@ -9,9 +9,10 @@ flows:
   a85456d1-5b8c-40c9-b1db-07dbb1467c0d: {ver: 1, file: JSON_Data_Pipeline.snapshot,
     comments: '', author: anonymous, created: 1692794883943, flowName: JSON Data Pipeline,
     flowDesc: 'Read from csv, filter and save json data to text file and database'}
-  35eff8ae-c3fd-48f9-b80a-d0380b95afa8: {ver: 1, file: SCF_Data_Pipeline_V2.snapshot,
-    comments: '', author: anonymous, created: 1693472577369, flowName: SCF Data Pipeline
-      V2, flowDesc: SeeClickFix API to Elasticsearch V2}
+  35eff8ae-c3fd-48f9-b80a-d0380b95afa8: {ver: 2, file: SCF_Data_Pipeline_V2.snapshot,
+    comments: Add log message when next page processing is done, author: anonymous,
+    created: 1693473236544, flowName: SCF Data Pipeline V2, flowDesc: SeeClickFix
+      API to Elasticsearch V2}
   1fa13543-8a3e-4be0-922c-ed747a5b8218: {ver: 5, file: CSV_Data_Pipeline.snapshot,
     comments: enable git repository, author: anonymous, created: 1692793352224, flowName: CSV
       Data Pipeline, flowDesc: 'Read from csv, filter and save data as json to text

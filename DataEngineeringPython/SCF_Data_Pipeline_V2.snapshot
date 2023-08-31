@@ -6,7 +6,7 @@
     "flowSnapshot" : {
       "externalControllerServices" : { },
       "flowContents" : {
-        "comments" : "",
+        "comments" : "SeeClickFix API to Elasticsearch V2\n- use InvokeHttp Processor instead of ExecuteScript to get next page data\n- use RouteAttribute to stop InvokeHttp Processor when last page is reached",
         "componentType" : "PROCESS_GROUP",
         "connections" : [ {
           "backPressureDataSizeThreshold" : "1 GB",
@@ -203,6 +203,39 @@
             "id" : "de50849f-414a-394d-bcaf-94576ca035ab",
             "instanceIdentifier" : "12e339a9-0073-1ec3-460e-04898b19cf51",
             "name" : "Query SCF  - Issues",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "c5a0fad1-8134-3b69-83ff-10a4ac3501f2",
+            "id" : "6402ee20-6324-3c03-97e9-39a96f913b77",
+            "instanceIdentifier" : "12e339c1-0073-1ec3-d761-38e6871bd350",
+            "name" : "LogMessage",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "c5a0fad1-8134-3b69-83ff-10a4ac3501f2",
+          "identifier" : "ebe5d2d6-94f9-35e7-919a-5051f3336b9b",
+          "instanceIdentifier" : "12e339c2-0073-1ec3-20ae-a8bddf5e7724",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "fail" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "c5a0fad1-8134-3b69-83ff-10a4ac3501f2",
+            "id" : "78b6ed64-7cc2-3c07-9c6b-0dc3c37804d8",
+            "instanceIdentifier" : "12e339aa-0073-1ec3-28b3-6b5bf3703fb9",
+            "name" : "RouteOnAttribute",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -416,6 +449,7 @@
         "inputPorts" : [ ],
         "instanceIdentifier" : "4ad1ac3c-018a-1000-adc9-830af20ab01e",
         "labels" : [ ],
+        "logFileSuffix" : "",
         "name" : "311_data_pipeline_v2",
         "outputPorts" : [ ],
         "position" : {
@@ -1071,6 +1105,62 @@
           "type" : "org.apache.nifi.processors.elasticsearch.PutElasticsearchHttp",
           "yieldDuration" : "1 sec"
         }, {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.23.2"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "c5a0fad1-8134-3b69-83ff-10a4ac3501f2",
+          "identifier" : "6402ee20-6324-3c03-97e9-39a96f913b77",
+          "instanceIdentifier" : "12e339c1-0073-1ec3-d761-38e6871bd350",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "LogMessage",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 1400.0,
+            "y" : -136.0
+          },
+          "properties" : {
+            "log-message" : "Last page has been processed. TotalPages: ${total_pages}, CurrentPage: ${current_page}",
+            "log-level" : "info"
+          },
+          "propertyDescriptors" : {
+            "log-message" : {
+              "displayName" : "Log message",
+              "identifiesControllerService" : false,
+              "name" : "log-message",
+              "sensitive" : false
+            },
+            "log-level" : {
+              "displayName" : "Log Level",
+              "identifiesControllerService" : false,
+              "name" : "log-level",
+              "sensitive" : false
+            },
+            "log-prefix" : {
+              "displayName" : "Log prefix",
+              "identifiesControllerService" : false,
+              "name" : "log-prefix",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 25,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.LogMessage",
+          "yieldDuration" : "1 sec"
+        }, {
           "autoTerminatedRelationships" : [ "success", "failure", "retry" ],
           "backoffMechanism" : "PENALIZE_FLOWFILE",
           "bulletinLevel" : "WARN",
@@ -1253,7 +1343,7 @@
             "idle-timeout" : "5 mins",
             "Use Chunked Encoding" : "false",
             "Follow Redirects" : "True",
-            "Remote URL" : "https://seeclickfix.com/api/v2/issues?place_url=bernalillo-county&per_page=100&page=46",
+            "Remote URL" : "https://seeclickfix.com/api/v2/issues?place_url=bernalillo-county&per_page=100",
             "Content-Type" : "${mime.type}",
             "flow-file-naming-strategy" : "RANDOM",
             "max-idle-connections" : "5",
@@ -1880,7 +1970,7 @@
           "type" : "org.apache.nifi.processors.standard.EvaluateJsonPath",
           "yieldDuration" : "1 sec"
         }, {
-          "autoTerminatedRelationships" : [ "fail", "unmatched" ],
+          "autoTerminatedRelationships" : [ "unmatched" ],
           "backoffMechanism" : "PENALIZE_FLOWFILE",
           "bulletinLevel" : "WARN",
           "bundle" : {
