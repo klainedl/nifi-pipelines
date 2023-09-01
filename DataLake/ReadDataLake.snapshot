@@ -128,8 +128,8 @@
           "instanceIdentifier" : "2c06f823-018a-1000-326e-92168b66bc9a",
           "name" : "OutputDataLake",
           "position" : {
-            "x" : 328.0,
-            "y" : 368.0
+            "x" : 320.0,
+            "y" : 384.0
           },
           "scheduledState" : "ENABLED",
           "type" : "OUTPUT_PORT"
@@ -165,9 +165,9 @@
           "properties" : {
             "Keep Source File" : "true",
             "Minimum File Age" : "0 sec",
-            "Polling Interval" : "0 sec",
+            "Polling Interval" : "5 sec",
             "Input Directory" : "/home/klaine/dataengineeringwithpython/datalake",
-            "Batch Size" : "1000",
+            "Batch Size" : "10",
             "Minimum File Size" : "0 B",
             "Ignore Hidden Files" : "true",
             "Recurse Subdirectories" : "true",

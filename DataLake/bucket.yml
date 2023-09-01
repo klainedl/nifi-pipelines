@@ -16,9 +16,9 @@ flows:
   5481a897-0a66-401a-b7fa-cb8e56ff6b60: {ver: 4, file: InsertStaging.snapshot, comments: 'use
       insert on conflict ', author: anonymous, created: 1693210033987, flowName: InsertStaging,
     flowDesc: Insert data to postgres database and update counter}
-  9e96f175-8fd3-40c7-a968-d242a992c5a2: {ver: 3, file: ReadDataLake.snapshot, comments: update
-      BatchSize to 1000, author: anonymous, created: 1693487490878, flowName: ReadDataLake,
-    flowDesc: 'Read json files, evaluate and update counter'}
+  9e96f175-8fd3-40c7-a968-d242a992c5a2: {ver: 4, file: ReadDataLake.snapshot, comments: update
+      batch size to 10  and polling interval to 5 sec, author: anonymous, created: 1693556914711,
+    flowName: ReadDataLake, flowDesc: 'Read json files, evaluate and update counter'}
   e630e692-ccaf-45a0-92c3-ec0fcd9cd5c8: {ver: 2, file: InsertWarehouse.snapshot, comments: fix
       filename to match name value, author: anonymous, created: 1693217686219, flowName: InsertWarehouse,
     flowDesc: 'query staging data, split and evaluate, insert to warehouse table and
