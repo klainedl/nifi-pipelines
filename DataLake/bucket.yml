@@ -1,17 +1,18 @@
 flows:
+  669cf60b-4b8c-41c5-81a2-1571ad0f7525: {ver: 2, file: ScanDataLake.snapshot, comments: '',
+    author: anonymous, created: 1693210063743, flowName: ScanDataLake, flowDesc: 'Scan
+      json content, evaluate and send to slack'}
   e5f03dd4-7158-44f9-ae65-e62c24f27669: {ver: 4, file: QueryStaging.snapshot, comments: update
       json writer to output one line per object, author: anonymous, created: 1693211866806,
     flowName: QueryStaging, flowDesc: 'Read from postgres database, evaluate and route
       on attrbute'}
-  669cf60b-4b8c-41c5-81a2-1571ad0f7525: {ver: 2, file: ScanDataLake.snapshot, comments: '',
-    author: anonymous, created: 1693210063743, flowName: ScanDataLake, flowDesc: 'Scan
-      json content, evaluate and send to slack'}
   53419c94-c5de-4856-ab19-7fad723c7fbb: {ver: 1, file: KafkaProducer.snapshot, comments: '',
     author: anonymous, created: 1693491475560, flowName: KafkaProducer, flowDesc: Implement
       kafka producer with control rate}
-  b8685f2a-1f69-4983-baed-15e915f4c737: {ver: 1, file: KafkaConsumer.snapshot, comments: '',
-    author: anonymous, created: 1693491618209, flowName: KafkaConsumer, flowDesc: Implement
-      kafka consumer in consumer groups with control rate}
+  b8685f2a-1f69-4983-baed-15e915f4c737: {ver: 2, file: KafkaConsumer.snapshot, comments: add
+      EvaluateJsonPath to fix insert staging error, author: anonymous, created: 1693556339106,
+    flowName: KafkaConsumer, flowDesc: Implement kafka consumer in consumer groups
+      with control rate}
   5481a897-0a66-401a-b7fa-cb8e56ff6b60: {ver: 4, file: InsertStaging.snapshot, comments: 'use
       insert on conflict ', author: anonymous, created: 1693210033987, flowName: InsertStaging,
     flowDesc: Insert data to postgres database and update counter}
