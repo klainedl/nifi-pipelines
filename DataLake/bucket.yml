@@ -19,8 +19,8 @@ flows:
   9e96f175-8fd3-40c7-a968-d242a992c5a2: {ver: 4, file: ReadDataLake.snapshot, comments: update
       batch size to 10  and polling interval to 5 sec, author: anonymous, created: 1693556914711,
     flowName: ReadDataLake, flowDesc: 'Read json files, evaluate and update counter'}
-  e630e692-ccaf-45a0-92c3-ec0fcd9cd5c8: {ver: 2, file: InsertWarehouse.snapshot, comments: fix
-      filename to match name value, author: anonymous, created: 1693217686219, flowName: InsertWarehouse,
+  e630e692-ccaf-45a0-92c3-ec0fcd9cd5c8: {ver: 3, file: InsertWarehouse.snapshot, comments: update
+      batch size to 1000, author: anonymous, created: 1693556979887, flowName: InsertWarehouse,
     flowDesc: 'query staging data, split and evaluate, insert to warehouse table and
       update counter'}
   4f24d99a-9a05-4ccd-8add-b8cd72f8f15a: {ver: 2, file: ValidateStaging.snapshot, comments: fix

@@ -306,7 +306,7 @@
               "name" : "database-driver-locations",
               "resourceDefinition" : {
                 "cardinality" : "MULTIPLE",
-                "resourceTypes" : [ "DIRECTORY", "URL", "FILE" ]
+                "resourceTypes" : [ "URL", "DIRECTORY", "FILE" ]
               },
               "sensitive" : false
             },
@@ -523,7 +523,7 @@
           "properties" : {
             "Support Fragmented Transactions" : "true",
             "putsql-sql-statement" : "INSERT INTO ${warehouse} \nVALUES ('${userid}', '${name}', '${age}', '${street}', '${city}', '${state}', '${zip}')\nON CONFLICT (userid) \nDO NOTHING;",
-            "Batch Size" : "100",
+            "Batch Size" : "1000",
             "Obtain Generated Keys" : "false",
             "JDBC Connection Pool" : "0ea6fe44-4681-3e49-b882-f06a0bfb2fa2",
             "database-session-autocommit" : "false",
