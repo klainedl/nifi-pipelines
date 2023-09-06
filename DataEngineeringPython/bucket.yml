@@ -1,14 +1,14 @@
 flows:
-  5bbff76c-52e6-461e-81d9-a6a8a5e41179: {ver: 2, file: SCF_Data_Pipeline.snapshot,
-    comments: remove v2 version, author: anonymous, created: 1693472498126, flowName: SCF
-      Data Pipeline, flowDesc: ''}
+  a85456d1-5b8c-40c9-b1db-07dbb1467c0d: {ver: 1, file: JSON_Data_Pipeline.snapshot,
+    comments: '', author: anonymous, created: 1692794883943, flowName: JSON Data Pipeline,
+    flowDesc: 'Read from csv, filter and save json data to text file and database'}
   6fc1e7b2-7300-4b28-b962-ef3ff8bb63cb: {ver: 1, file: Great_Expectations_Validation_Pipeline.snapshot,
     comments: '', author: anonymous, created: 1692795133803, flowName: Great Expectations
       Validation Pipeline, flowDesc: 'Use python script to generate csv and validate
       data using great expectations, then save valid and invalid data as text file'}
-  a85456d1-5b8c-40c9-b1db-07dbb1467c0d: {ver: 1, file: JSON_Data_Pipeline.snapshot,
-    comments: '', author: anonymous, created: 1692794883943, flowName: JSON Data Pipeline,
-    flowDesc: 'Read from csv, filter and save json data to text file and database'}
+  5bbff76c-52e6-461e-81d9-a6a8a5e41179: {ver: 2, file: SCF_Data_Pipeline.snapshot,
+    comments: remove v2 version, author: anonymous, created: 1693472498126, flowName: SCF
+      Data Pipeline, flowDesc: ''}
   35eff8ae-c3fd-48f9-b80a-d0380b95afa8: {ver: 2, file: SCF_Data_Pipeline_V2.snapshot,
     comments: Add log message when next page processing is done, author: anonymous,
     created: 1693473236544, flowName: SCF Data Pipeline V2, flowDesc: SeeClickFix
@@ -17,6 +17,10 @@ flows:
     comments: enable git repository, author: anonymous, created: 1692793352224, flowName: CSV
       Data Pipeline, flowDesc: 'Read from csv, filter and save data as json to text
       file or database'}
+  9740acd2-2be0-4ef2-8c6b-cb2607897b6c: {ver: 1, file: Weather_API_Pipeline.snapshot,
+    comments: '', author: anonymous, created: 1693989869896, flowName: Weather API
+      Pipeline, flowDesc: 'Generate flowfile of different cities, call weather api
+      to extract data, transform json and load to PostgresSQL and Elasticsearch'}
   db552e32-7d61-4212-af79-badb6dcf4618: {ver: 2, file: Postgresql_Elasticsearch_Data_Pipeline.snapshot,
     comments: use nifi variable registry, author: anonymous, created: 1692806522784,
     flowName: Postgresql Elasticsearch Data Pipeline, flowDesc: Query Postgresql data
